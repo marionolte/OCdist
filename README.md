@@ -37,4 +37,4 @@ Options:
 
 
  $ ./java -jar OC.jar -version
- Opitz MHService - OC.jar/0.0.2.7 - Mario Nolte
+ Opitz MHService - OC.jar/0.0.2.8 - Mario Nolte
