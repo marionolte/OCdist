@@ -29,6 +29,29 @@ Options:
 
 		-ldapbind  [-h hostname] [-p port] [-D adminDN ] [-j passwordfile] [-b baseDN ]
 
+		-ldapcopy  [-h hostname] [-p port] [-ssl] [-D adminDN] [-j passwordfile] [-modh modifyHost] [-modp port] [-modD adminDN] [-modj passwordfile] [-modssl] [-b baseDN] [-bc copyBaseDN] [-f filter] [-t copytemplate] [-pg <page-sizelimit>] [objectlist]
+		example template file:
+				#template: strict
+				dn: ou=People|ou=Users
+				objectClass: top person posixAccount inetOrgPerson
+				gidNumber: 1000
+				sn:
+				givenname:
+				mail: __givenname__.__sn__@example.com
+				uid: __givenname(0,1)__sn(0,5)__
+				uidnumber: {autoinc(1000)}
+				loginShell: /bin/bash
+				homeDirectory: /home/__uid__
+				cn: __uid__
+				userpassword: 1234
+
+ 	Information to the template:
+ 		__ 			before and after will take a value from a ldap attribute
+ 		(0,5)  			take a substring from 0 to 5 
+ 		ou=People|ou=Users 	replace  in the dn the ou=People part with ou=Users
+ 		autoinc(1000) 	will generate an auto integer incrimental value starting with the base 1000
+ 		strict in the #template	this with take over only the names attributes
+
 
 		-ldapuserblk  [-h hostname <def:localhost>] [-p port <def:389>] [-a adminDN <def:cn=orcladmin> [-j passwordfile] [-b baseDN ] [-f filter] [-ssl <set ldaps schema>] [-o ldapCheck ] [ -of ldapCheckFile ] [-create] [-modh <hostname for modificaction>] [-modp <port for ldapserver modification> ] [ -modssl <set ldaps for modification>]| [-help <used per default>]
 
