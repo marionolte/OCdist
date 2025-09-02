@@ -1,7 +1,7 @@
 # OCdist
 
 $ java -jar OC.jar
-Opitz MHService - OC.jar/0.0.5 - Mario Nolte
+Opitz MHService - OC.jar/0.0.6 - Mario Nolte
 
 Options:
 		-version 		-	print version information
