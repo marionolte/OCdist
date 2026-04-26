@@ -40,5 +40,5 @@ Options:
                 -mwinfo                 -       get Middleware information
 
 
- $ ./java -jar OC.jar -version
- Opitz MHService - OC.jar/0.0.6 - Mario Nolte
+ $ ./java -jar  macmario-core-io.jar -version
+ MHService - macmario-core-io.jar/0.0.7 - Mario Nolte
