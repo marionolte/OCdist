@@ -1,6 +1,6 @@
-# OCdist
+# macmario-core-io (OCDist)
 
-MHService - macmario-core-io.jar/0.0.7 - Mario Nolte
+MHService - macmario-core-io.jar/0.0.8 - Mario Nolte
 
 Options:
                 -version                -       print version information
@@ -18,7 +18,7 @@ Options:
                 -testhttp <url> [url1,] -       Test URL Connection to URL
 
                 -checker  [-f <pattern file>] [-i <include pattern>] [-b <begin time>] [-e <end time>] <FILE|Directory>
-       format time: DAY-MONTH-YEAR HH:MIN:SEC - example to use '01-MAR-2013 10:12:45'
+                                          format time: DAY-MONTH-YEAR HH:MIN:SEC - example to use '01-MAR-2013 10:12:45'
 
                 -wlsconfig [-dest <script dir [/home/sumario/bin]>] [-reconfig] [-silient] <domaindir <domaindir1...>>
                                         -       Configure Wls Starting scripts in directory <dest>
@@ -39,6 +39,9 @@ Options:
 
                 -mwinfo                 -       get Middleware information
 
+                -keepass                -       handle KeePass database information
 
- $ ./java -jar  macmario-core-io.jar -version
- MHService - macmario-core-io.jar/0.0.7 - Mario Nolte
+
+
+ $ java -jar  macmario-core-io.jar -version
+ MHService - macmario-core-io.jar/0.0.8- Mario Nolte
